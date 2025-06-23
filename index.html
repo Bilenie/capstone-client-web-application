@@ -28,9 +28,16 @@
 
     <script src="js/application.js"></script>
 </head>
+
 <body>
 
-    <header id="header-user"></header>
+
+<!-- Add dark mode and light mode feature -->
+<button id="themeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 1000; font-size: 1.5rem;" aria-label="Toggle Theme">
+    ☀️
+</button>
+
+<header id="header-user"></header>
 
     <section id="errors">
     </section>
@@ -42,6 +49,7 @@
 
     <footer></footer>
 
+    <script src="js/theme.js"></script> <!--  Add this new script -->
 
 </body>
 </html>

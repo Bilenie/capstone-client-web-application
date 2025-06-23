@@ -199,4 +199,53 @@ main > .content-form .cart-item
 {
     margin-bottom: 2px !important;
 }
+/* === Dark Mode & Themed Background body {
+                                         background: url('/images/light-bg.jpg') no-repeat center center fixed;
+                                         background-size: cover;
+                                     }
 
+                                     body.dark-mode {
+                                         background: url('/images/dark-bg.jpg') no-repeat center center fixed;
+                                         background-size: cover;
+                                     }=== */
+body {
+    background: linear-gradient(120deg, #fdfcfb, #e2d1c3, #a18cd1); /* Light gradient */
+    transition: background 0.5s ease, color 0.3s ease;
+    color: black;
+}
+
+body.dark-mode {
+    background: linear-gradient(to right, #232526, #414345, #000000); /* Dark gradient */
+    color: white;
+}
+
+body.dark-mode header,
+body.dark-mode .product,
+body.dark-mode .modal,
+body.dark-mode .content-form,
+body.dark-mode .filter-box {
+    background-color: #222;
+    color: white;
+    border-color: #555;
+}
+
+body.dark-mode .product .price {
+    color: #e6b800;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #777;
+}
+
+#themeToggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: inherit;
+}
