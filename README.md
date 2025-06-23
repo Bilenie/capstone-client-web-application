@@ -28,7 +28,7 @@ bash
 npx http-server .
 Browse at the URL shown (e.g. http://localhost:8080)
 
-⚙️ Usage
+## ⚙️ Usage
 
 Click ☀️/🌙 at top-right to switch themes (saved in browser).
 
@@ -38,7 +38,7 @@ Browse & filter products in the grid.
 
 “Login” opens the auth modal—enter credentials to receive JWT for secure actions.
 
-🎨 Added featrue => Styling Customization
+## 🎨 Added featrue => Styling Customization
 
 In css/main.css (bottom):
 
@@ -61,7 +61,7 @@ body.dark-mode {
   background: url('images/dark-bg.jpg') no-repeat center/cover;
 }
 
-📂 Structure
+## 📂 Structure
 
 css/
   main.css
@@ -72,7 +72,7 @@ js/
   services/*.js    ← API calls
 index.html
 
-🤝 Credits
+## 🤝 Credits
 Eric Shwartze – instructor 
 YearUp – tutor and peers
 OpenAI’s ChatGPT – AI assistance for planning and README drafting
