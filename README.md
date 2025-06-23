@@ -62,7 +62,7 @@ body.dark-mode {
 }
 
 ## 📂 Structure
-
+![img.png](img.png)
 css/
   main.css
 js/
