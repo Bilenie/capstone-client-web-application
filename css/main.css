@@ -242,6 +242,10 @@ body.dark-mode button {
 }
 
 #themeToggle {
+    position: absolute;
+    top: 20px;      /* Adjust as needed */
+    right: 20px;    /* You can also use `left` if preferred */
+    z-index: 1000;  /* Makes sure it stays above other elements */
     font-size: 1.5rem;
     background: none;
     border: none;
