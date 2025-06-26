@@ -208,10 +208,41 @@ body {
     color: black;
 }
 
-/* DARK MODE: Same layout, different background & color scheme */
-body.dark-mode {
-    background: url('/images/gif/BPG4.gif') no-repeat center center fixed;
+/* LIGHT MODE: Slideshow using 3 GIFs */
+@keyframes lightBgSlideshow {
+    0%   { background-image: url('/images/gif/2kjK.gif'); }
+    33%  { background-image: url('/images/gif/GblD.gif'); }
+    66%  { background-image: url('/images/gif/HG6p.gif'); }
+    100% { background-image: url('/images/gif/2kjK.gif'); }
+}
+
+body {
+    animation: lightBgSlideshow 30s infinite ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
+    position: relative;
+    transition: background 0.5s ease, color 0.3s ease;
+    color: black;
+}
+
+/* DARK MODE: Slideshow using 3 dark-themed GIFs */
+@keyframes darkBgSlideshow {
+    0%   { background-image: url('/images/gif/BPG4.gif'); }
+    33%  { background-image: url('/images/gif/DNS.gif'); }
+    66%  { background-image: url('/images/gif/NhlC.gif'); }
+    100% { background-image: url('/images/gif/BPG4.gif'); }
+}
+
+body.dark-mode {
+    animation: darkBgSlideshow 30s infinite ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    transition: background 0.5s ease, color 0.3s ease;
     color: white;
 }
 
@@ -221,7 +252,7 @@ body.dark-mode .product,
 body.dark-mode .modal,
 body.dark-mode .content-form,
 body.dark-mode .filter-box {
-    background-color: rgba(34, 34, 34, 0.9); /* dark with slight transparency */
+    background-color: rgba(34, 34, 34, 0.6); /* dark with slight transparency */
     color: white;
     border-color: #555;
 }
@@ -237,7 +268,6 @@ body.dark-mode button {
     color: white;
     border: 1px solid #777;
 }
-
 /* THEME TOGGLE BUTTON */
 #themeToggle {
     position: absolute;
