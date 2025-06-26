@@ -199,38 +199,35 @@ main > .content-form .cart-item
 {
     margin-bottom: 2px !important;
 }
-/* === Dark Mode & Themed Background body {
-                                         background: url('/images/light-bg.jpg') no-repeat center center fixed;
-                                         background-size: cover;
-                                     }
-
-                                     body.dark-mode {
-                                         background: url('/images/dark-bg.jpg') no-repeat center center fixed;
-                                         background-size: cover;
-                                     }=== */
+/* LIGHT MODE: Default styles */
 body {
-    background: linear-gradient(120deg, #fdfcfb, #e2d1c3, #a18cd1); /* Light gradient */
+    background: url('/images/gif/2kjK.gif') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
     transition: background 0.5s ease, color 0.3s ease;
     color: black;
 }
 
+/* DARK MODE: Same layout, different background & color scheme */
 body.dark-mode {
-    background: linear-gradient(to right, #232526, #414345, #000000); /* Dark gradient */
+    background: url('/images/gif/BPG4.gif') no-repeat center center fixed;
+    background-size: cover;
     color: white;
 }
 
+/* Shared layout elements in dark mode */
 body.dark-mode header,
 body.dark-mode .product,
 body.dark-mode .modal,
 body.dark-mode .content-form,
 body.dark-mode .filter-box {
-    background-color: #222;
+    background-color: rgba(34, 34, 34, 0.9); /* dark with slight transparency */
     color: white;
     border-color: #555;
 }
 
 body.dark-mode .product .price {
-    color: #e6b800;
+    color: #e6b800; /* gold price */
 }
 
 body.dark-mode input,
@@ -241,11 +238,25 @@ body.dark-mode button {
     border: 1px solid #777;
 }
 
+/* THEME TOGGLE BUTTON */
 #themeToggle {
     position: absolute;
-    top: 20px;      /* Adjust as needed */
-    right: 20px;    /* You can also use `left` if preferred */
-    z-index: 1000;  /* Makes sure it stays above other elements */
+    top: 40px;
+    right: 40px;
+    z-index: 2000;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: inherit;
+}
+
+toggle {
+    position: absolute;
+    top: 40px;      /* Adjust as needed */
+    right: 40px;    /* You can also use `left` if preferred */
+    z-index: 2000;  /* Makes sure it stays above other elements */
     font-size: 1.5rem;
     background: none;
     border: none;
