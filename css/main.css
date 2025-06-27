@@ -205,7 +205,8 @@ body {
     background-size: cover;
     position: relative;
     transition: background 0.5s ease, color 0.3s ease;
-    color: black;
+    font-family: 'Playfair Display', serif;
+    color: #2c2c2c; /* deep charcoal */
 }
 
 /* LIGHT MODE: Slideshow using 3 GIFs */
@@ -224,7 +225,8 @@ body {
     background-size: cover;
     position: relative;
     transition: background 0.5s ease, color 0.3s ease;
-    color: black;
+    font-family: 'Playfair Display', serif;
+    color: #2c2c2c; /* deep charcoal */
 }
 
 /* DARK MODE: Slideshow using 3 dark-themed GIFs */
@@ -247,11 +249,11 @@ body.dark-mode {
 }
 
 /* Shared layout elements in dark mode */
-body.dark-mode header,
-body.dark-mode .product,
-body.dark-mode .modal,
-body.dark-mode .content-form,
-body.dark-mode .filter-box {
+    body.dark-mode header,
+    body.dark-mode .product,
+    body.dark-mode .modal,
+    body.dark-mode .content-form,
+    body.dark-mode .filter-box {
     background-color: rgba(34, 34, 34, 0.6); /* dark with slight transparency */
     color: white;
     border-color: #555;
@@ -261,9 +263,9 @@ body.dark-mode .product .price {
     color: #e6b800; /* gold price */
 }
 
-body.dark-mode input,
-body.dark-mode select,
-body.dark-mode button {
+    body.dark-mode input,
+    body.dark-mode select,
+    body.dark-mode button {
     background-color: #333;
     color: white;
     border: 1px solid #777;
@@ -293,4 +295,402 @@ toggle {
     cursor: pointer;
     padding: 5px 10px;
     color: inherit;
+}
+
+
+/* ========== LIGHT MODE STYLING ========== */
+
+/* Stylish Product Card - Transparent Gradient Border */
+.product {
+    position: relative;
+    border-radius: 12px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.8); /* more transparent */
+    background-clip: padding-box;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    color: #333;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product::before {
+    content: '';
+    position: absolute;
+    top: -2px; left: -2px; right: -2px; bottom: -2px;
+    z-index: -1;
+    border-radius: 14px;
+    background: linear-gradient(45deg, #ff8c00, #ffb347);
+}
+
+/* Hover Effect */
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.product .price {
+    color: #ff8c00;
+}
+
+/* Filter Box */
+.filter-box {
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    background-clip: padding-box;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    padding: 15px;
+}
+
+/* Dropdown */
+.filter-box select {
+    border-radius: 8px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+}
+
+/* Cart Form Box */
+.content-form {
+    background: rgba(255,255,255,0.9);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+
+/* ========== DARK MODE STYLING ========== */
+
+body.dark-mode .product {
+    position: relative;
+    background: rgba(34, 34, 34, 0.9); /* more transparent */
+    color: #eee;
+}
+
+body.dark-mode .product::before {
+    content: '';
+    position: absolute;
+    top: -2px; left: -2px; right: -2px; bottom: -2px;
+    z-index: -1;
+    border-radius: 14px;
+    background: linear-gradient(45deg, #666, #999); /* subtle gray gradient */
+}
+
+body.dark-mode .product .price {
+    color: #dddddd;
+}
+
+body.dark-mode .filter-box {
+    background: rgba(30, 30, 30, 0.7);
+    border: 2px solid rgba(150, 150, 150, 0.3);
+    box-shadow: 0 3px 10px rgba(255,255,255,0.05);
+}
+
+body.dark-mode select {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #777;
+}
+
+body.dark-mode .content-form {
+    background: rgba(40, 40, 40, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(255,255,255,0.03);
+}
+/* ------------------ Global Font & Base Colors ------------------ */
+body, p, h1, h2, h3, h4, h5, h6, a, span, label {
+    font-family: 'Playfair Display', serif !important;
+    color: #2c1a0f !important; /* Dark espresso tone for day mode */
+    text-shadow: none;
+}
+
+body {
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #fffaf4;
+}
+
+/* ------------------ Product Card Styling ------------------ */
+.product {
+    background-color: rgba(255, 245, 230, 0.95);
+    border: 2px solid #d69d57;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(200, 170, 120, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 16px rgba(220, 180, 100, 0.6);
+}
+
+/* ------------------ Product Title & Price ------------------ */
+.product h3, .product-title {
+    color: #3c2a1a !important;
+    font-weight: bold;
+}
+
+.product .price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, #f7c97f, #fbdca3, #f7c97f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 6px rgba(240, 190, 100, 0.6);
+}
+
+/* ------------------ Product Description ------------------ */
+.product p {
+    color: #5b4636 !important;
+}
+
+/* ------------------ Filter Box ------------------ */
+.filter-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #d9a365;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    padding: 16px;
+    color: #3a271c;
+}
+
+.filter-box label,
+.filter-box h3,
+.filter-box span {
+    color: #2e1d10;
+    font-weight: bold;
+}
+
+.filter-box select {
+    background-color: #fff;
+    color: #2f1d0c;
+    border: 1px solid #d6b08a;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+/* ------------------ Add to Cart Button ------------------ */
+.product button,
+.add-to-cart {
+    background-color: #3a4b10;
+    color: #fbe8d3;
+    border: 1px solid #fbe8d3;
+    text-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.product button:hover,
+.add-to-cart:hover {
+    background-color: #4e3c2f;
+    box-shadow: 0 0 10px rgba(255, 204, 153, 0.6);
+    color: #fff6e8;
+}
+
+/* ------------------ Navbar ------------------ */
+.navbar a,
+.navbar-nav .nav-link {
+    color: #3e2b1a !important;
+    text-shadow: none;
+}
+
+.navbar a:hover,
+.navbar-nav .nav-link:hover {
+    color: #b17640 !important;
+    border-bottom: 2px solid #e4b87f;
+}
+
+/* ------------------ Username Styling ------------------ */
+.username {
+    font-weight: bold;
+    color: #3a1f0f !important;
+}
+
+/* ------------------ Range Slider Label Fix ------------------ */
+input[type="range"] + label,
+.filter-box input[type="range"] {
+    color: #2c1a0f !important;
+}
+
+/* ------------------ Dark Mode Overrides ------------------ */
+body.dark-mode, body.dark-mode p, body.dark-mode h1, body.dark-mode h2,
+body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6,
+body.dark-mode label, body.dark-mode span, body.dark-mode .filter-box {
+    color: #9d5f20 !important;
+    text-shadow: 0 0 6px rgba(255, 230, 180, 0.5);
+}
+
+body.dark-mode .product {
+    background-color: rgba(40, 40, 40, 0.9);
+    border-color: rgba(240, 190, 100, 0.4);
+}
+
+body.dark-mode .filter-box {
+    background-color: rgba(30, 30, 30, 0.85);
+    border-color: rgba(255, 200, 120, 0.3);
+}
+
+body.dark-mode select {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #999;
+}
+/* Global Font, Color & Glow */
+body, p, h1, h2, h3, h4, h5, h6, a, span {
+    font-family: 'Playfair Display', serif !important;
+    color: #2d1e1e !important;  /* Day mode text */
+    text-shadow:
+        0 0 2px rgba(255, 180, 100, 0.8),  /* stronger, warmer glow for day mode */
+        0 0 6px rgba(255, 160, 60, 0.4);   /* more visible golden glow */
+    text-decoration: none !important; /* Remove underline from all text elements, including links */
+}
+/* Glow on hover */
+body:hover,
+p:hover,
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover,
+a:hover,
+span:hover {
+    text-shadow:
+        0 0 6px rgba(255, 220, 120, 1),    /* brighter, bigger glow */
+        0 0 12px rgba(255, 200, 80, 0.8),
+        0 0 18px rgba(255, 180, 60, 0.6);
+    cursor: pointer; /* optional, especially for links */
+}
+/* Dark Mode Glow & Text Override */
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode a,
+body.dark-mode span {
+    color: #fff8e7 !important;  /* Light cream */
+    text-shadow:
+        0 0 3px rgba(255, 248, 200, 0.6),
+        0 0 6px rgba(255, 210, 120, 0.5);  /* warmer glow for night */
+    text-decoration: none !important; /* Remove underline for dark mode links as well */
+    transition: text-shadow 0.3s ease; /* smooth transition */
+}
+
+/* Dark Mode Hover Glow */
+body.dark-mode p:hover,
+body.dark-mode h1:hover,
+body.dark-mode h2:hover,
+body.dark-mode h3:hover,
+body.dark-mode h4:hover,
+body.dark-mode h5:hover,
+body.dark-mode h6:hover,
+body.dark-mode a:hover,
+body.dark-mode span:hover {
+    text-shadow:
+        0 0 8px rgba(255, 255, 220, 1),
+        0 0 14px rgba(255, 255, 180, 0.9),
+        0 0 20px rgba(255, 240, 150, 0.8);
+    cursor: pointer; /* optional for interactive elements */
+}
+
+/* Body Styling */
+body {
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #2d1e1e;
+}
+
+/* Product Cards */
+.product {
+    border: 2px solid rgba(255, 165, 0, 0.4); /* reduced opacity for warmer orange */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.1); /* lighter orange glow */
+    background-color: rgba(255, 248, 240, 0.9); /* much more transparent */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(255, 140, 0, 0.6); /* softer glow on hover */
+}
+
+/* Price Glow */
+.product-price {
+    color: #ffd700 !important;
+    text-shadow: 0 0 5px #ffd700, 0 0 10px #ffa500; /* glowing gold */
+}
+
+/* Heading Glow */
+.product-title, h2, h3 {
+    color: #fffaf0;
+    text-shadow: 0 0 3px #ffda9e, 0 0 8px #d18c37;
+}
+
+
+/* Description */
+.product-description {
+    color: #3e2f2f;
+}
+
+/* NAVBAR GLOW */
+.navbar a,
+.navbar-nav .nav-link {
+    text-decoration: none !important;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif !important;
+    color: #402000 !important;  /* deep brown */
+    text-shadow: 0 0 4px rgba(255, 200, 0, 0.6); /* glow */
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar-nav .nav-link:hover {
+    color: #ffcf66 !important;
+    text-shadow: 0 0 6px #ffc107, 0 0 10px #ff9800;
+}
+
+/* Dropdown in Filter */
+.filter-box select {
+    background-color: #fff8f2;
+    color: #2d1e1e;
+    border: 1px solid #e0b77f;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    color: #ffffff;
+}
+
+body.dark-mode .product {
+    background-color: rgba(40, 40, 40, 0.9);
+    border: 2px solid rgba(255, 215, 0, 0.5); /* gold glow */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+body.dark-mode .product-price {
+    color: #ffeb3b;
+    text-shadow: 0 0 5px #ffee58, 0 0 12px #fdd835;
+}
+
+body.dark-mode .product-title {
+    color: #fff9c4;
+    text-shadow: 0 0 5px #ffeb3b, 0 0 8px #fdd835;
+}
+
+body.dark-mode .navbar a,
+body.dark-mode .navbar-nav .nav-link {
+    color: #fff3cd !important;
+    text-shadow: 0 0 5px #fff176;
+}
+
+body.dark-mode .navbar a:hover,
+body.dark-mode .navbar-nav .nav-link:hover {
+    color: #ffd54f !important;
+    text-shadow: 0 0 10px #ffeb3b, 0 0 15px #fbc02d;
+}
+
+body.dark-mode .filter-box select {
+    background-color: #2e2e2e;
+    color: #fff7e1;
+    border: 1px solid #fbc02d;
 }
