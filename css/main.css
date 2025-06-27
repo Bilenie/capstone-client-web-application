@@ -447,7 +447,7 @@ body {
 
 /* ------------------ Filter Box ------------------ */
 .filter-box {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(245, 245, 245, 0.30);
     border: 2px solid #d9a365;
     box-shadow: 0 3px 6px rgba(0,0,0,0.05);
     padding: 16px;
@@ -515,7 +515,7 @@ input[type="range"] + label,
 body.dark-mode, body.dark-mode p, body.dark-mode h1, body.dark-mode h2,
 body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6,
 body.dark-mode label, body.dark-mode span, body.dark-mode .filter-box {
-    color: #9d5f20 !important;
+    color: #edb883 !important;
     text-shadow: 0 0 6px rgba(255, 230, 180, 0.5);
 }
 
